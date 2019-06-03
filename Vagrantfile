@@ -248,19 +248,19 @@ EOF
 echo "Taint - remove taint from master node"
 kubectl taint nodes --all node-role.kubernetes.io/master-
 echo "Apply Traefik ingress RBAC"
-kubectl apply -f /vagrant/2-rbac.yaml
+kubectl apply -f /vagrant/traefik/2-rbac.yaml
 echo "Apply Traefik daemonset"
-kubectl apply -f /vagrant/3-daemonset.yaml
+kubectl apply -f /vagrant/traefik/3-daemonset.yaml
 echo "Apply Traefik service"
-kubectl apply -f /vagrant/4-service.yaml
+kubectl apply -f /vagrant/traefik/4-service.yaml
 echo "Apply Traefik ingress"
-kubectl apply -f /vagrant/5-ingress.yaml
+kubectl apply -f /vagrant/traefik/5-ingress.yaml
 echo "Apply Traefik demo app - nginx"
-kubectl apply -f /vagrant/6-nginx-deploy.yaml
+kubectl apply -f /vagrant/traefik/6-nginx-deploy.yaml
 echo "Apply Traefik demo app - nginx service"
-kubectl apply -f /vagrant/7-nginx-service.yaml
+kubectl apply -f /vagrant/traefik/7-nginx-service.yaml
 echo "Apply Traefik demo app - nginx ingress"
-kubectl apply -f /vagrant/8-nginx-ingress.yaml
+kubectl apply -f /vagrant/traefik/8-nginx-ingress.yaml
 
 #echo "Apply RBAC Configuration to k8s"
 #kubectl apply -f /home/vagrant/rbac-config.yaml
