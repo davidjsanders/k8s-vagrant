@@ -13,15 +13,6 @@ spec:
     resources: {}
     terminationMessagePath: /dev/termination-log
     terminationMessagePolicy: File
-    volumeMounts:
-    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
-      name: default-token-nrfj4
-      readOnly: true
   dnsPolicy: ClusterFirst
   enableServiceLinks: true
   restartPolicy: Always
-  volumes:
-  - name: default-token-nrfj4
-    secret:
-      defaultMode: 420
-      secretName: default-token-nrfj4
