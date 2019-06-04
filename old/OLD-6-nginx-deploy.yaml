@@ -14,5 +14,4 @@ spec:
     terminationMessagePath: /dev/termination-log
     terminationMessagePolicy: File
   dnsPolicy: ClusterFirst
-  enableServiceLinks: true
   restartPolicy: Always
